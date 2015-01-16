@@ -1,6 +1,6 @@
 <?php
-		ini_set('display_errors', 'Off');
-		ini_set('html_errors', 'Off');
+	ini_set('display_errors', 'Off');
+	ini_set('html_errors', 'Off');
 		
         $aw = fopen('awards.csv', 'r');
         $co = fopen('contracts.csv', 'r');
@@ -15,7 +15,7 @@
         {
             if($x==0){
                 unset($awards[0][0]);
-                $line[$x]=array_merge($contracts[0],$awards[0]); //header
+                $line[$x]=array_merge($contracts[0],$awards[0]);
             }
             else{
                 $dl=0;
@@ -57,10 +57,10 @@
         				}
         				$j++;
         			}        		     			        		
-             	}
-             	$i++;
+             		}
+             		$i++;
         	}
     	}	
-      echo read_csv('final.csv');
-		  fclose($fi);
+      	echo read_csv('final.csv');
+	fclose($fi);
 ?>
